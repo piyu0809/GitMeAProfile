@@ -34,8 +34,7 @@ class Header extends Component {
     <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-
-            Github Searcher
+            GitMeAProfile
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>

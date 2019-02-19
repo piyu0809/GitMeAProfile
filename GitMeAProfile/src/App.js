@@ -78,8 +78,7 @@ getProfile(){
         idToken: localStorage.getItem('idToken'),
         profile: JSON.parse(localStorage.getItem('profile'))
       });
-
-  }
+    }
 }
 
 showlock(){
@@ -111,7 +110,7 @@ logout(){
 
     }
     else{
-      gitty = "Click on Login to go to GitHUb Viewer";
+      gitty = "Click on Login to go to GitMeAProfile";
     }
 
     return (
@@ -130,7 +129,7 @@ logout(){
 
 
             {gitty}
-            
+
 
 
 

@@ -13,7 +13,7 @@ class Github extends Component {
     super(props);
 
     this.state = {
-      username: 'piyu0809',
+      username: '',
       avatar: '',
       name: '',
       repos: '',
@@ -26,26 +26,29 @@ class Github extends Component {
 
 
   getprofile(username){
-    let finalurl = `${API}/${username}`;
-
-
-    fetch(finalurl)
-    .then((res) => res.json() )
-    .then((data) => {
-      this.setState({
-        username: data.login,
-        avatar: data.avatar_url,
-        name: data.name,
-        repos: data.public_repos,
-        followers: data.followers,
-        following: data.following,
-        homeurl: data.html_url,
-        notfound: data.message
-      })
-    })
-
-    .catch((error) => console.log('there was problem fethcing data'));
-
+    if(username === ''){
+          this.setState({
+              notfound: null
+            })
+        }
+    else{
+        let finalurl = `${API}/${username}`;
+        fetch(finalurl)
+        .then((res) => res.json() )
+        .then((data) => {
+          this.setState({
+            username: data.login,
+            avatar: data.avatar_url,
+            name: data.name,
+            repos: data.public_repos,
+            followers: data.followers,
+            following: data.following,
+            homeurl: data.html_url,
+            notfound: data.message
+          })
+        })
+        .catch((error) => console.log('there was problem fethcing data'));
+      }
   }
 
   componentDidMount(){
@@ -56,7 +59,8 @@ class Github extends Component {
       <div>
 
         <section id='card'>
-          <h4> Welcome to GitHUb Searcher.
+          <h4>
+              Lets get you a github profile you want to view
           </h4>
 
           <Search searchprofile={this.getprofile.bind(this)} />

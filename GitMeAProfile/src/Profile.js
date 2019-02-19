@@ -1,10 +1,10 @@
 import React , { Component } from 'react';
+import notfound from './notfound.png';
 
 
 
 
 class Profile extends Component {
-
 
 
   render(){
@@ -13,16 +13,26 @@ class Profile extends Component {
     let following = `${userdata1.homeurl}/following`;
     let repos = `${userdata1.homeurl}/repositories`;
 
-
-    if(userdata1.notfound === 'Not Found'){
+    if(userdata1.notfound === null){
       return(
-        <div className="notfound">
-          <h2>Heyyy</h2>
-          <p>Are you sure, for whom you are loooking for??</p>
-
+        <div>
         </div>
       );
     }
+
+
+
+
+
+    else if(userdata1.notfound === 'Not Found'){
+      return(
+        <div className="notfound">
+          <img src={notfound} width="200" height="200" />
+          <p>Hey are you sure what are you looking for?</p>
+        </div>
+      );
+    }
+
     else{
       return(
         <section className="github-profile">
