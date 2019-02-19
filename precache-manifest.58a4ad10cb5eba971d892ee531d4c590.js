@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "14fa1f8ce6cfe3b71848",
-    "url": "/GitMeAProfile/static/css/main.a5ff2d06.chunk.css"
+    "revision": "60f66b5d8c3756511f68",
+    "url": "/GitMeAProfile/static/css/main.eca6e822.chunk.css"
   },
   {
-    "revision": "14fa1f8ce6cfe3b71848",
-    "url": "/GitMeAProfile/static/js/main.14fa1f8c.chunk.js"
+    "revision": "60f66b5d8c3756511f68",
+    "url": "/GitMeAProfile/static/js/main.60f66b5d.chunk.js"
   },
   {
     "revision": "04c76d5b4a3ebed602d2",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/GitMeAProfile/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "f4c092c7fa5e339cfbd24c8c956dd88f",
+    "revision": "fb4bf102acb31fcbc7e8a2d6dbe5659d",
     "url": "/GitMeAProfile/index.html"
   }
 ];
